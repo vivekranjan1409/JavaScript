@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <style>
+        #box{
+            height: 150px;
+            width: 100px;
+            border: 1px solid red;
+            text-align: center;
+            color: white;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        This is a div. 
+        <ul>
+            Lists:
+            <li>Lists1</li>
+            <li>Lists2</li>
+            <li>Lists3</li>
+        </ul>
+    </div>
+
+    <p>This is a simple line.</p>
+    <script>
+        let newButt = document.createElement("button");
+        newButt.innerText = "Submit";
+        console.log(newButt);
+
+        let div = document.querySelector("div");
+        div.append(newButt);   // Adds at the end of the node(inside)
+
+        // div.prepend(newButt)  Adds at the start of the node (inside)
+
+        // div.before(newButt); Adds at before the node (outside)
+        // div.after(newButt); Adds at after the node (outside)
+
+
+        let newHeading = document.createElement("h1");
+        newHeading.innerHTML = "Vivek";
+
+        let body = document.querySelector("body");
+        body.prepend(newHeading);
+
+        let para = document.querySelector("p");
+        para.remove();
+        
+    </script>
+</body>
+</html>

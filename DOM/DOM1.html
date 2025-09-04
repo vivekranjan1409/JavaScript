@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            text-align: center;
+            color: white;
+            background-color: royalblue;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="box" name="JSDiv">This is a div</div>
+    <p class="para">This is a Simple Paragraph</p>
+    <script>
+        // let div = document.querySelector("div");
+        // console.log(div);
+
+        // let id = div.getAttribute("id");
+        // console.log(id);
+
+        // let name = div.getAttribute("name");
+        // console.log(name);
+
+
+
+        // let para = document.querySelector("p");
+
+        // let p = para.setAttribute("class","newClass");
+        // console.log(p);
+
+        let div = document.querySelector("div");
+        div.style.backgroundColor = "red";
+        div.innerText = "Vivek";
+        div.style.visibility = "hidden"
+        // div.style.display = ""
+    </script>
+</body>
+</html>
