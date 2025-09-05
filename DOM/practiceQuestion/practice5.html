@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            border: 1px solid black;
+            height: 400px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .circle{
+            border-radius: 50px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box"></div>
+        <button onclick="circle()" id="btn1">click me!</button>
+        <button onclick="removeButton()" style="display: none;" id="btn2">click me!</button>
+    </div>
+
+    <script>
+        
+        let circle = () =>{
+            let box = document.querySelector("#box");
+            
+            box.classList.add("circle");
+            let btn = document.querySelector("#btn1");
+            btn.style.display = "none";
+            let btn1 = document.querySelector("#btn2");
+            btn1.style.display = "block";
+            
+            
+        }
+        let removeButton = () =>{
+            let box = document.querySelector("#box");
+            let btn = document.querySelector("#btn2");
+            let btn1 = document.querySelector("#btn1");
+
+            box.classList.remove("circle");
+            btn.style.display = "none";
+            btn1.style.display = "block";
+
+        }
+        
+        
+    </script>
+</body>
+</html>
