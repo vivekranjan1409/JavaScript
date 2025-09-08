@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #outer-div{
+                height: 500px;
+                width: 400px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            .inner-div{
+                height: 200px;
+                width: 200px;
+                border: 1px solid red;
+                margin-bottom: 20px;
+                /* border-radius: 100px; */
+            }
+            #btn{
+                height: 50px;
+                width: 150px;
+                border-radius: 50px;
+                background-color: green;
+                color: white;
+            }
+            .circle{
+                background-color: red;
+                border-radius: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="outer-div">
+            <div class="inner-div"></div>
+            <button id="btn">click me!</button>
+        </div>
+
+        <script>
+            let innerDiv = document.querySelector(".inner-div");
+            let btn = document.querySelector("#btn");
+
+            let currDiv = "square";
+
+            btn.addEventListener("click", () => {
+                if(currDiv === "square"){
+                    currDiv = "circle";
+                    // console.log("add");
+
+                    innerDiv.classList.add("circle");
+                    
+                }
+                else{
+                    currDiv = "square";
+                    // console.log("remove");
+                    // innerDiv.classList.add("inner-div");
+                    innerDiv.classList.remove("circle");
+
+                }
+            });
+
+        </script>
+    </body>
+    </html>

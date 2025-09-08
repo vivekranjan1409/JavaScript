@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sideB{
+            height: 100vh;
+            width: 300px;
+            background-color: black;
+            text-align: center;
+            /* text-align: center; */
+            /* border: 1px solid red; */
+        }
+        #btn2{
+            margin-top: 50px;
+            background-color: red;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 100px;
+            border: none;
+        }
+        #btn1{
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: green;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 100px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="side" style="display: none;">
+        <button id="btn2">Close SideBar</button>
+    </div>
+    <button id="btn1">Open SideBar</button>
+    <script>
+        let button1 = document.querySelector("#btn1");
+        let button2 = document.querySelector("#btn2");
+        let SideBar = document.querySelector(".side");
+
+        let sid = "seen";
+
+        button1.addEventListener("click",  () => {
+           if(sid === "seen"){
+                sid = "unseen";
+                SideBar.style.display = "block";
+                SideBar.classList.add("sideB");
+                console.log("seen")
+                button1.style.display = "none";  
+           }
+           
+        });
+
+        button2.addEventListener("click", () => {
+            sid = "seen";
+            SideBar.style.display = "none";
+            console.log("Sidebar closed");
+            button1.style.display = "block";
+        });
+    </script>
+</body>
+</html>
